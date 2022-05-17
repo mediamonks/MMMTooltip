@@ -1,5 +1,7 @@
 # MMMTooltip
 
+[![Build](https://github.com/mediamonks/MMMTooltip/actions/workflows/build.yml/badge.svg)](https://github.com/mediamonks/MMMTooltip/actions/workflows/build.yml)
+
 Simple, auto-layout based, customizable tooltip.
 
 (This is a part of `MMMTemple` suite of iOS libraries we use at [MediaMonks](https://www.mediamonks.com/).)
