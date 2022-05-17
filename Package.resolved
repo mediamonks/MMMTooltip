@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MMMCommonCore",
+        "repositoryURL": "https://github.com/mediamonks/MMMCommonCore",
+        "state": {
+          "branch": null,
+          "revision": "7cd1e1bd713d78cd156b487942b072c4ffc8b161",
+          "version": "1.8.4"
+        }
+      },
+      {
+        "package": "MMMTackKit",
+        "repositoryURL": "https://github.com/mediamonks/MMMTackKit",
+        "state": {
+          "branch": null,
+          "revision": "439c14dfb440641e113b439ab4b90720f640e5c5",
+          "version": "0.8.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
