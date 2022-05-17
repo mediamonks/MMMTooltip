@@ -23,7 +23,7 @@ SPM:
 
 ## Example
 
-[MMMTooltip](https://github.com/mediamonks/MMMTooltip/raw/main/Example.gif)!
+![MMMTooltip](https://github.com/mediamonks/MMMTooltip/raw/main/Example.gif)
 
 ## Usage
 
