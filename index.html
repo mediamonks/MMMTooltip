@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MMMTooltip  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="MMMTooltip  Reference"></a>
+
+    <header class="header">
+      <a href="https://media.monks.com">
+        <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Media.Monks" class="header-logo" />
+      </a>
+    
+      <p class="header-col header-col--primary"></p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/mediamonks/MMMTooltip">
+            <img class="header-icon" src="img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">MMMTooltip</a>
+      <img class="carat" src="img/carat.png" alt=""/>
+      MMMTooltip  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MMMTooltip.html">MMMTooltip</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MMMTooltip/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MMMTooltip/Dismissal.html">– Dismissal</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MMMTooltip/Animation.html">– Animation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MMMTooltipDelegate.html">MMMTooltipDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <h1 id='mmmtooltip' class='heading'>MMMTooltip</h1>
+
+<p>Simple, auto-layout based, customizable tooltip.</p>
+
+<p>(This is a part of <code>MMMTemple</code> suite of iOS libraries we use at <a href="https://www.mediamonks.com/">MediaMonks</a>.)</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/mediamonks/MMMSpecs.git'</span>
+<span class="n">source</span> <span class="s1">'https://cdn.cocoapods.org/'</span>
+<span class="p">.</span><span class="nf">.</span><span class="p">.</span>
+<span class="nf">pod</span> <span class="s1">'MMMTooltip'</span>
+</code></pre>
+
+<p>SPM:</p>
+<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/mediamonks/MMMTooltip"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"0.1.0"</span><span class="p">))</span>
+</code></pre>
+<h2 id='example' class='heading'>Example</h2>
+
+<p><a href="https://github.com/mediamonks/MMMTooltip/raw/main/Example.gif">MMMTooltip</a>!</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>A very simple example, have a look at the docs for <code><a href="Classes/MMMTooltip/Style.html">MMMTooltip.Style</a></code> and
+<code>MMMTooltip.attachToView</code> for more info.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">tip</span> <span class="o">=</span> <span class="kt">MMMTooltip</span><span class="o">.</span><span class="nf">attachToView</span><span class="p">(</span>
+    <span class="n">button</span><span class="p">,</span> <span class="c1">// We attach the tooltip to the button.</span>
+    <span class="nv">contentView</span><span class="p">:</span> <span class="n">label</span><span class="p">,</span> <span class="c1">// We have a simple label as the contentView, can be any UIView.</span>
+    <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span> <span class="o">.</span><span class="n">topCenter</span><span class="p">),</span> <span class="c1">// Location is the position for the arrow.</span>
+    <span class="nv">animation</span><span class="p">:</span> <span class="o">.</span><span class="nf">fadeAndSlide</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="nv">distance</span><span class="p">:</span> <span class="mi">10</span><span class="p">),</span> <span class="c1">// Use the fadeAndSlide animation.</span>
+    <span class="nv">dismissal</span><span class="p">:</span> <span class="o">.</span><span class="nf">timer</span><span class="p">(</span><span class="nv">interval</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">// Auto-dismiss after 3 seconds.</span>
+<span class="p">)</span>
+
+<span class="c1">// Now we can manually dismiss using:</span>
+<span class="n">tip</span><span class="p">?</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+<h2 id='ready-for-liftoff' class='heading'>Ready for liftoff? 🚀</h2>
+
+<p>We&rsquo;re always looking for talent. Join one of the fastest-growing rocket ships in
+the business. Head over to our <a href="https://media.monks.com/careers">careers page</a>
+for more info!</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2022 <a class="link" href="https://media.monks.com" target="_blank" rel="external noopener">Media.Monks</a>. All rights reserved. (Last updated: 2022-05-17)</p>
+      <p></p>
+    </section>
+  </body>
+</html>
